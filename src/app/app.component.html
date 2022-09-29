@@ -9,10 +9,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link disabled">Home</a>
-        <a class="nav-link active" aria-current="page" href="#">Productos</a>
-        <a class="nav-link disabled">About us</a>
-        <a class="nav-link disabled">Contacto</a>
+        <a class="nav-link disabled">{{nav1}}</a>
+        <a class="nav-link active" aria-current="page" href="#">{{nav2}}</a>
+        <a class="nav-link disabled">{{nav3}}</a>
+        <a class="nav-link disabled">{{nav4}}</a>
       </div>
     </div>
     <span class="navbar-text">
@@ -24,15 +24,15 @@
 </nav>
 <div class="container-main">
   <div class="container-list">
-    Lista de hierbas
+    <app-herbs-list></app-herbs-list>
   </div>
   <div class="container-carrito">
     Carrito de compras
   </div>
 </div>
 <footer>
-  <p>Home</p>
-  <p>Productos</p>
-  <p>About us</p>
-  <p>Contacto</p>
+  <p>{{nav1}}</p>
+  <p>{{nav2}}</p>
+  <p>{{nav3}}</p>
+  <p>{{nav4}}</p>
 </footer>

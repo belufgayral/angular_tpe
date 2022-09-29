@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'tpe';
+  nav1 = 'Home';
+  nav2 = 'Productos';
+  nav3 = 'About us';
+  nav4 = 'Contacto';
 }
