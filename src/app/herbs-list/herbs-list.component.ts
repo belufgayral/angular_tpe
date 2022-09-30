@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Herb } from './Herb';
 
 @Component({
   selector: 'app-herbs-list',
@@ -7,12 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HerbsListComponent implements OnInit {
 
-  herb1 = {
-    name: "Diente de león",
-    germination: "Primavera",
-    area: "Bosque Kamakura",
-    image: "./assets/img/herb1.png"
-  }
+  herbs: Herb[] = [ 
+    {
+      name: 'Diente de león',
+      germination: 'Primavera',
+      price: 30,
+      stock: 120,
+      image: './assets/img/herb1.png',
+      clearance: false,
+    },
+    {
+      name: 'Caléndula',
+      germination: 'Verano',
+      price: 50,
+      stock: 0,
+      image: './assets/img/herb1.png',
+      clearance: false,
+    },
+    {
+      name: 'Manzanilla',
+      germination: 'Otoño',
+      price: 50,
+      stock: 60,
+      image: './assets/img/herb1.png',
+      clearance: true,
+    },
+    {
+      name: 'Aloe vera',
+      germination: 'Invierno',
+      price: 45,
+      stock: 32,
+      image: './assets/img/herb1.png',
+      clearance: false,
+    },
+  ]
 
   constructor() { }
 

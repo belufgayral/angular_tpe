@@ -2,10 +2,19 @@ thead {
     font-size: 20px;
 }
 
+thead, th, td {
+    text-align: center;
+}
+
 th, td {
     vertical-align: middle;
 }
 
 img {
-    width: 100px;
+    width: 90px;
+    align-self: center;
+}
+
+.clearance {
+    background-color: rgba(188, 219, 188, 0.97);
 }
