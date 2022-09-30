@@ -11,6 +11,7 @@ export class HerbsListComponent implements OnInit {
     name: "Diente de león",
     germination: "Primavera",
     area: "Bosque Kamakura",
+    image: "./assets/img/herb1.png"
   }
 
   constructor() { }
