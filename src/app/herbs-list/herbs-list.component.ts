@@ -16,6 +16,7 @@ export class HerbsListComponent implements OnInit {
       stock: 120,
       image: './assets/img/herb1.png',
       clearance: false,
+      quantity: 0,
     },
     {
       name: 'Caléndula',
@@ -24,6 +25,7 @@ export class HerbsListComponent implements OnInit {
       stock: 0,
       image: './assets/img/herb1.png',
       clearance: false,
+      quantity: 0,
     },
     {
       name: 'Manzanilla',
@@ -32,6 +34,7 @@ export class HerbsListComponent implements OnInit {
       stock: 60,
       image: './assets/img/herb1.png',
       clearance: true,
+      quantity: 0,
     },
     {
       name: 'Aloe vera',
@@ -40,6 +43,7 @@ export class HerbsListComponent implements OnInit {
       stock: 32,
       image: './assets/img/herb1.png',
       clearance: false,
+      quantity: 0,
     },
   ]
 
@@ -48,4 +52,19 @@ export class HerbsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upQuantity(herb: Herb): void {
+    if (herb.quantity < herb.stock)
+      herb.quantity++;
+  }
+
+  downQuantity(herb: Herb): void {
+    if (herb.quantity > 0)
+      herb.quantity--;
+  }
+
+  changeQuantity(event: any, herb: Herb): void {
+    console.log(event.key);
+    if (event.key < 0 && event.key > 9)
+      herb.quantity = 0;
+  }
 }

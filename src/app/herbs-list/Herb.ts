@@ -5,4 +5,5 @@ export interface Herb {
     stock: number;
     image: string;
     clearance: boolean;
+    quantity: number;
 }

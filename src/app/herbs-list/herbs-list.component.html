@@ -4,7 +4,8 @@
         <th scope="col">Recurso</th>
         <th scope="col">Germinación</th>
         <th scope="col">Precio</th>
-        <th scope="col">Imagen</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
         <th scope="col"></th>
       </tr>
     </thead>
@@ -15,7 +16,15 @@
         <td>{{herb.price | currency}}</td>
         <td><img [src]="herb.image" [alt]="herb.name"/></td>
         <td><span *ngIf="herb.stock==0" class="badge bg-secondary">Sin stock</span>
-            <span *ngIf="herb.clearance && herb.stock>0" class="badge text-bg-success">¡En oferta!</span></td>
+            <span *ngIf="herb.clearance && herb.stock>0" class="badge text-bg-success">¡En oferta!</span>
+        </td>
+        <td>
+          <span *ngIf="herb.stock > 0" class="container-up-down">
+            <button class="btn btn-outline-dark" (click)="downQuantity(herb)">-</button>
+            <input type="string" [(ngModel)]="herb.quantity" (keyup)="changeQuantity($event, herb)">
+            <button class="btn btn-outline-dark" (click)="upQuantity(herb)">+</button>
+          </span>
+        </td>
       </tr>
     </tbody>
   </table>
