@@ -10,8 +10,8 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
         <a class="nav-link disabled">{{nav1}}</a>
-        <a class="nav-link active" aria-current="page" href="#">{{nav2}}</a>
-        <a class="nav-link disabled">{{nav3}}</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/herbs']">{{nav2}}</a>
+        <a class="nav-link active" aria-current="page" [routerLink]="['/about']">{{nav3}}</a>
         <a class="nav-link disabled">{{nav4}}</a>
       </div>
     </div>
@@ -22,7 +22,7 @@
     </span>
   </div>
 </nav>
-<app-herbs-section></app-herbs-section>
+<router-outlet></router-outlet>
 <footer>
   <p>{{nav1}}</p>
   <p>{{nav2}}</p>
