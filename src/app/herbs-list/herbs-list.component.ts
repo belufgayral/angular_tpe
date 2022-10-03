@@ -62,9 +62,12 @@ export class HerbsListComponent implements OnInit {
       herb.quantity--;
   }
 
-  changeQuantity(event: any, herb: Herb): void {
-    console.log(event.key);
-    if (event.key < 0 && event.key > 9)
+  changeQuantity(event: any, herb: Herb): void { //NO ANDA Y NO SÉ POR QUÉ
+    console.log(event.keyCode);
+    if (event.key == '3') { //ASÍ ANDA PERO NO ES PRÁCTICO
+      console.log("Entra al if");
       herb.quantity = 0;
+    }
   }
+  //keyCODE: del 48 al 57
 }

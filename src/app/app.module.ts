@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { HerbsListComponent } from './herbs-list/herbs-list.component';
 import { CarritoComprasComponent } from './carrito-compras/carrito-compras.component';
 import { FormsModule } from '@angular/forms';
+import { HerbsSectionComponent } from './herbs-section/herbs-section.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HerbsListComponent,
-    CarritoComprasComponent
+    CarritoComprasComponent,
+    HerbsSectionComponent
   ],
   imports: [
     BrowserModule,

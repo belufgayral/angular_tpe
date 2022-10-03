@@ -1,0 +1,23 @@
+.container-main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas:
+    "list"
+    "carrito";
+    margin: 5px;
+}
+
+.container-list {
+    grid-area: "list";
+}
+
+.container-carrito {
+    grid-area: "carrito";
+}
+
+.container-list, .container-carrito {
+    background-color: rgba(188, 203, 219, 0.97);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+}
