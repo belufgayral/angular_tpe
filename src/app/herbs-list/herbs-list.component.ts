@@ -52,22 +52,7 @@ export class HerbsListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  upQuantity(herb: Herb): void {
-    if (herb.quantity < herb.stock)
-      herb.quantity++;
+  maxReached(m: string) {
+    alert(m);
   }
-
-  downQuantity(herb: Herb): void {
-    if (herb.quantity > 0)
-      herb.quantity--;
-  }
-
-  changeQuantity(event: any, herb: Herb): void { //NO ANDA Y NO SÉ POR QUÉ
-    console.log(event.keyCode);
-    if (event.key == '3') { //ASÍ ANDA PERO NO ES PRÁCTICO
-      console.log("Entra al if");
-      herb.quantity = 0;
-    }
-  }
-  //keyCODE: del 48 al 57
 }

@@ -19,11 +19,7 @@
             <span *ngIf="herb.clearance && herb.stock>0" class="badge text-bg-success">¡En oferta!</span>
         </td>
         <td>
-          <span *ngIf="herb.stock > 0" class="container-up-down">
-            <button class="btn btn-outline-dark" (click)="downQuantity(herb)">-</button>
-            <input type="string" [(ngModel)]="herb.quantity" (keyup)="changeQuantity($event, herb)" placeholder="0">
-            <button class="btn btn-outline-dark" (click)="upQuantity(herb)">+</button>
-          </span>
+          <app-input-number [(quantity)]="herb.quantity" [max]="herb.stock" (maxReached)="maxReached($event)" *ngIf="herb.stock > 0"></app-input-number>
         </td>
       </tr>
     </tbody>
