@@ -13,7 +13,7 @@ export class HerbsListComponent implements OnInit {
       name: 'Diente de león',
       germination: 'Primavera',
       price: 30,
-      stock: 120,
+      stock: 5,
       image: './assets/img/herb1.png',
       clearance: false,
       quantity: 0,

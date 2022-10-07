@@ -8,6 +8,7 @@ import { CarritoComprasComponent } from './carrito-compras/carrito-compras.compo
 import { FormsModule } from '@angular/forms';
 import { HerbsSectionComponent } from './herbs-section/herbs-section.component';
 import { ApothecaryAboutComponent } from './apothecary-about/apothecary-about.component';
+import { InputNumberComponent } from './input-number/input-number.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { ApothecaryAboutComponent } from './apothecary-about/apothecary-about.co
     HerbsListComponent,
     CarritoComprasComponent,
     HerbsSectionComponent,
-    ApothecaryAboutComponent
+    ApothecaryAboutComponent,
+    InputNumberComponent
   ],
   imports: [
     BrowserModule,
