@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HerbCartService } from '../herb-cart.service';
 import { Herb } from './Herb';
 
 @Component({
@@ -47,12 +48,19 @@ export class HerbsListComponent implements OnInit {
     },
   ]
 
-  constructor() { }
+  constructor(private herbCartService: HerbCartService) { }
 
   ngOnInit(): void {
   }
 
   maxReached(m: string) {
     alert(m);
+  }
+
+  addToCart(herb: Herb): void {
+    if (herb.quantity > 0) 
+      this.herbCartService.addToCart(herb);
+      herb.stock -= herb.quantity;
+      herb.quantity = 0;
   }
 }

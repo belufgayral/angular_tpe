@@ -1,0 +1,7 @@
+<h2 class="display-6">Carrito de compras</h2>
+<ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center list-group-item-action" *ngFor="let herb of cartList$ | async">
+        {{herb.name}}
+        <span class="badge bg-primary rounded-pill">{{herb.quantity}}</span>
+    </li>
+</ul>

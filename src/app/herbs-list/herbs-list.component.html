@@ -1,9 +1,10 @@
 <table class="table table-hover">
     <thead>
       <tr>
-        <th scope="col">Recurso</th>
-        <th scope="col">Germinación</th>
-        <th scope="col">Precio</th>
+        <th class="display-6" scope="col">Recurso</th>
+        <th class="display-6" scope="col">Germinación</th>
+        <th class="display-6" scope="col">Precio</th>
+        <th scope="col"></th>
         <th scope="col"></th>
         <th scope="col"></th>
         <th scope="col"></th>
@@ -20,6 +21,9 @@
         </td>
         <td>
           <app-input-number [(quantity)]="herb.quantity" [max]="herb.stock" (maxReached)="maxReached($event)" *ngIf="herb.stock > 0"></app-input-number>
+        </td>
+        <td>
+          <button class="btn btn-outline-dark" (click)="addToCart(herb)" *ngIf="herb.stock > 0">Comprar</button>
         </td>
       </tr>
     </tbody>
